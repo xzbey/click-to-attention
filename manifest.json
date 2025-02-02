@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Click to attention",
+  "version": "4.2",
+  "description": "Автоматически подтверждает присутствие на мероприятии mts-link",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_title": "Авто-кликер присутствия"
+  },
+  "icons": {
+    "16": "icon.jpg",
+    "48": "icon.jpg",
+    "128": "icon.jpg"
+  }
+}
